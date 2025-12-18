@@ -1,0 +1,86 @@
+.app-container {
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.app-container.default {
+  background-image: url('../assets/default.jpg');
+}
+
+.app-container.clear {
+  background-image: url('../assets/clear.jpg');
+}
+
+.app-container.rain {
+  background-image: url('../assets/rain.jpg');
+}
+
+.app-container.snow {
+  background-image: url('../assets/snow.jpg');
+}
+
+.app-container.clouds {
+  background-image: url('../assets/clouds.jpg');
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.search-box input {
+    flex: 1; 
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1.1rem;
+    color: white;
+    font-family: inherit;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.error-message {
+    margin-top: 20px;
+    background: rgba(255, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
